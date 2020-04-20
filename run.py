@@ -119,7 +119,8 @@ if __name__ == '__main__':
         parsers_done.append(run_parser(reactome_parser))
 
         reactome_mapping_parser = ReactomeMappingParser(ROOT_DIR)
-        parsers_done.append(reactome_mapping_parser)
+        reactome_mapping_parser.taxid = '9606'
+        parsers_done.append(run_parser(reactome_mapping_parser))
 
         # Load data
         # ================
