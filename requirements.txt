@@ -1,5 +1,5 @@
-#biodatagraph>=0.0.4
+biodatagraph>=0.0.5
 # install biodatagraph from master at GitHub
-git+https://github.com/kaiserpreusse/biodatagraph@dev#egg=biodatagraph
+# git+https://github.com/kaiserpreusse/biodatagraph@dev#egg=biodatagraph
 py2neo
 neo4j
