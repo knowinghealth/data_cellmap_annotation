@@ -43,6 +43,8 @@ def create_index(graph, parser_list):
     for parser in parser_list:
         for relationshipset in parser.container.relationshipsets:
             relationshipset.create_index(graph)
+        for nodeset in parser.container.nodesets:
+            nodeset.create_index(graph)
 
 
 def create_nodesets(graph, parser_list):
@@ -55,7 +57,7 @@ def create_nodesets(graph, parser_list):
     for parser in parser_list:
         log.info("Create nodes for parser {}".format(parser.__class__.__name__))
         for nodeset in parser.container.nodesets:
-            nodeset.create(graph)
+            nodeset.merge(graph)
 
 
 def create_relationshipsets(graph, parser_list):
@@ -68,7 +70,7 @@ def create_relationshipsets(graph, parser_list):
     for parser in parser_list:
         log.info("Create relationships for parser {}".format(parser.__class__.__name__))
         for relset in parser.container.relationshipsets:
-            relset.create(graph)
+            relset.merge(graph)
 
 
 if __name__ == '__main__':
